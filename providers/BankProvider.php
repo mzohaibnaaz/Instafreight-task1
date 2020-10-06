@@ -13,10 +13,7 @@ class BankProvider extends BaseProvider {
         //return $this->error(202, "Something is wrong with bank API");
         
         // because api link isn't working so i'm gonna use dummy data
-        return [
-            "code"  => 200,
-            "data" =>  50,
-        ];
+        return $this->success(200);
         // incase if you use API request
         // because i'm using composer with project
         // i can use third-party libraries as dependancy
@@ -37,7 +34,7 @@ class BankProvider extends BaseProvider {
             // let's say response gives us price
             $price = $res->price;
             
-            return $this->success(json_decode($curl->response));
+            return $this->success($price);
         }
         
     }

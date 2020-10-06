@@ -17,6 +17,7 @@ using `insurance` class
 require __DIR__ . '/vendor/autoload.php';
 use InstaFreight\Insurance;
 
+$insurance = new Insurance();
 $quotes = $insurance->getQuotes();
 
 ```
@@ -29,8 +30,8 @@ $quotes = $insurance->getQuotes(["bank","insurance-company"]);
 ``` 
 
 ### Create new provider
-create new provider using CLI tool!
-> create CLI tool just for fun :)
+create new provider using `CLI` tool!
+> created CLI tool just for fun :)
 
 command
 
@@ -59,3 +60,14 @@ class TestProvider extends BaseProvider {
 ?>
 ```
 do all the fun code inside `getQuote` :)
+```
+Note: When you creating provider file. make sure you follow these rules
+
+> Provider file name & class name should be same
+> File name should start with Capital letter
+> Provider name should add Provider kayword at the end Ex if you create `test` provider it should be named like `TestProvider`
+```
+If you using CLI tool, don't need to add Provider at the end just enter name Ex if you creating `test` provider cmd will be
+```bash
+php InstaFreight provider:create test
+```

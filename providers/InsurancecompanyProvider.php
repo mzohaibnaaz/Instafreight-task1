@@ -10,10 +10,7 @@ class InsuranceCompanyProvider extends BaseProvider {
     function getQuote(){
         
         // because api link isn't working so i'm gonna use dummy data
-        return [
-            "code"  => 200,
-            "data" =>  100,
-        ];
+        return $this->success(10);
         
         // incase if you use API request
         // because i'm using composer with project
