@@ -1,0 +1,15 @@
+<?php
+require __DIR__ . '/vendor/autoload.php';
+
+use InstaFreight\ProviderCli;
+
+use Symfony\Component\Console\Application;
+
+$application = new Application();
+
+# add our commands
+$application->add(new ProviderCli());
+
+$application->run();
+
+?>

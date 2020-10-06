@@ -1,0 +1,21 @@
+{
+    "name": "tast/one",
+    "type": "project",
+    "require": {
+        "php-curl-class/php-curl-class": "^8.8",
+        "php": ">=7.1.7",
+        "symfony/console": "^4.4"
+    },
+    "authors": [
+        {
+            "name": "M Zohaib Naz",
+            "email": "mzohaibnaaz@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "InstaFreight\\": "Core/"
+        }
+    }
+}
